@@ -1,0 +1,93 @@
+qwert
+
+ghjjhh
+
+
+Microsoft Windows [Version 10.0.19044.1415]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\git>git config --global user.name "Faria"
+
+D:\git>git config --global user.email flabonno172098@bscse.uiu.ac.bd
+
+D:\git>git config --global color.ui auto
+
+D:\git>git log
+fatal: not a git repository (or any of the parent directories): .git
+
+D:\git>git init
+Initialized empty Git repository in D:/git/.git/
+
+D:\git>git log
+fatal: your current branch 'master' does not have any commits yet
+
+D:\git>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        asd.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\git>git checkout master
+error: pathspec 'master' did not match any file(s) known to git
+
+D:\git>git add .
+
+D:\git>git commit -m "test"
+[master (root-commit) 890f07d] test
+ 1 file changed, 1 insertion(+)
+ create mode 100644 asd.txt
+
+D:\git>git log
+commit 890f07d7346eb0a026d1b09df92c21301278eaec (HEAD -> master)
+Author: Faria <flabonno172098@bscse.uiu.ac.bd>
+Date:   Mon Mar 14 11:50:18 2022 +0600
+
+    test
+
+D:\git>git checkout master
+Already on 'master'
+
+D:\git>git branch v1
+
+D:\git>git checkout v1
+Switched to branch 'v1'
+
+D:\git>git add .
+
+D:\git>git commit -m "v1"
+[v1 9bac4c7] v1
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+D:\git>git log
+commit 9bac4c764745b22f2c948961040d8938b149daf8 (HEAD -> v1)
+Author: Faria <flabonno172098@bscse.uiu.ac.bd>
+Date:   Mon Mar 14 11:53:35 2022 +0600
+
+    v1
+
+commit 890f07d7346eb0a026d1b09df92c21301278eaec (master)
+Author: Faria <flabonno172098@bscse.uiu.ac.bd>
+Date:   Mon Mar 14 11:50:18 2022 +0600
+
+    test
+
+D:\git>git checkout master
+Switched to branch 'master'
+
+D:\git>git merge v1
+Updating 890f07d..9bac4c7
+Fast-forward
+ asd.txt | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+D:\git>
+
+
+
+
+
